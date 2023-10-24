@@ -53,7 +53,7 @@ def input_guess(length_of_secret: int) -> str:
 def main() -> None:
     """The entry poing of the program and # Your code will go here."""
     # Defining variables
-    secret_word: str = "beach"
+    secret_word: str = "fires"
     length: int = len(secret_word)
     current_try: int = 1
     max_tries: int = 6

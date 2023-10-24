@@ -1,5 +1,6 @@
 """Paint a scene using Turtle graphics."""
-from turtle import Turtle, colormode, done
+from turtle import Turtle, done
+
 
 def rectangle(t: Turtle, width: int, height: int, x: int, y: int) -> None:
     """Draw a rectangle with the given width and height."""
@@ -46,7 +47,7 @@ def triangle(t: Turtle, side_length: int, x: int, y: int) -> None:
     t.end_fill()
 
 
-def lollipop(t: Turtle, size: int, x: int, y: int, fill_color: str, pen_color: str) -> None:
+def lollipop(t: Turtle, size: float, x: int, y: int, fill_color: str, pen_color: str) -> None:
     """Draw a lolipop of given size and color."""
     # draw the stick
     stick_height = size * 25
@@ -94,7 +95,7 @@ def lollipop(t: Turtle, size: int, x: int, y: int, fill_color: str, pen_color: s
 
 
 def main() -> None:
-    "Draw lollipop mountains."""
+    """Draw lollipop mountains."""
     leo = Turtle()
     bob = Turtle()
     bob.speed(0)
@@ -120,7 +121,7 @@ def main() -> None:
     # draw the sky
     leo.color("sky blue") 
     rectangle(leo, 720, 600, -360, -300)
-       # draw the grass
+    # draw the grass
     leo.color("green")
     rectangle(leo, 720, 100, -360, -400)
     # draw the mountains
@@ -141,8 +142,10 @@ def main() -> None:
     lollipop(brett, 1.5, 180, -80, "black", "orange")
     lollipop(piere, 1.5, -165, -225, "yellow", "purple")
     lollipop(jackson, 1.5, 170, -225, "light blue", "black")
+
     
-    
-main()
+if __name__ == "__main__":
+    main()
+
 
 done()
